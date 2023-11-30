@@ -1,0 +1,29 @@
+Interface of character
+- humanInterface
+    - String getJob(): ส่งชื่ออาชีพของตัวละคร
+    - void levelUp(): เพิ่มค่าเลเวลของตัวละคร
+    - void attack(Human h): โจมตีตัวละครที่ส่งเข้าไปโดยใช้คำสั่ง attack
+    - void useSkill(Human h): โจมตีตัวละครที่ส่งเข้าไปโดยใช้คำสั่ง skill
+    - String isHaveAccessories(): ส่งชื่อaccessoriesที่ตัวละครมีอยู่
+    - void equipAccessories(String asc): เพิ่ม accessories ที่ตัวละครตามค่าที่ส่งเข้ามา
+    - String isHaveWeapon(): ส่งชื่อweaponที่ตัวละครมีอยู่
+    - void equipWeapon(String wep): เพิ่ม weapon ที่ตัวละครตามค่าที่ส่งเข้ามา
+    - void upgradeWeapon(): เพิ่ม stat ของ weapon ของตัวละคร
+โดยได้ทำการสร้าง class Human ที่ implements humanInterface มา และได้ extends class Human ไปเป็น class ของตัวละคร 2 class คือ Warrior และ Wizard
+
+Interface of accessories 
+- accessories 
+  - String getName(); ส่งชื่อของ accessory ที่ตัวละครมี
+  - int getLevel(); ส่งเลเวลของ accessory ที่ตัวละครมี
+  - int getAbility(); ส่งค่าของ ability ที่ accessory ได้ boost ให้ตัวละคร
+  - int getHP(); ส่งค่าของ HP ที่ accessory boost ให้ตัวละคร
+  - void upgrade(); อัพเลเวลของ accessory โดยจะเพิ่มค่าพลังต่างๆ
+โดยตัวอย่างของ accessories สองอันคือ แหวน(Ring) และ สร้อยคอ(Necklace)
+
+- weapon
+  - String getName(); ส่งชื่อของ weapon ที่ตัวละครมี
+  - int getLevel(); ส่งเลเวลของ level ที่ตัวละครมี
+  - int getSkill(); ส่งค่า damage ของ weapon skill
+  - int getDamage(); ส่ง damage ของ weapon
+  - void upgrade(); อัพเลเวลของ weapon โดยจะเพิ่มค่าพลัง damage
+โดยตัวอย่างของ weapon สองอันคือ ดาบ(Sword) และ ไม้คทา(Wand)
